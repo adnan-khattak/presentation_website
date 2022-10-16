@@ -8,11 +8,13 @@
     <link rel="stylesheet" href="./CSS/style.css">
     <title>Presentation_website</title>
 </head>
-<!-- git commit -o "My new Project"git init
-git add -A
+<style>
+/* <!-- git commit -o "My new Project"git init */
+/* git add -A
 git commit -m 'Added my project'
 git remote add origin git@github.com:sammy/my-new-project.git
-git push -u -f origin main -->
+git push -u -f origin main --> */
+</style>
 <body>
     <!-- Page-1 -->
     <section id="page-1" class="page">
@@ -57,7 +59,32 @@ git push -u -f origin main -->
             </a>
         </div>
     </section>
-    
-
+    <!-- JQUERY CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+     <!-- Smooth Scrolling -->
+    <script>$(document).ready(function(){
+        // Add smooth scrolling to all links
+        $("a").on('click', function(event) {
+      
+          // Make sure this.hash has a value before overriding default behavior
+          if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
+      
+            // Store hash
+            var hash = this.hash;
+      
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+            $('html, body').animate({
+              scrollTop: $(hash).offset().top
+            }, 800, function(){
+      
+              // Add hash (#) to URL when done scrolling (default click behavior)
+              window.location.hash = hash;
+            });
+          } // End if
+        });
+      });</script>
 </body>
 </html>
